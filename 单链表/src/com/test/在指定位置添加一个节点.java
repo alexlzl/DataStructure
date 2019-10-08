@@ -8,14 +8,15 @@ public class 在指定位置添加一个节点 {
         head.next = next1;
         next1.next = next2;
         try {
-            System.out.println("插入前"+head.next.value);
-            insertElement(head,100,1);
-            System.out.println("插入后"+head.next.value);
+            System.out.println("插入前" + head.next.value);
+            insertElement(head, 100, 1);
+            System.out.println("插入后" + head.next.value);
         } catch (Exception e) {
 
 
         }
     }
+
     // 注意这里 index 从 0 开始
     public static Node insertElement(Node head, int value, int index) throws Exception {
         //为了方便这里我们假设知道链表的长度
@@ -25,11 +26,19 @@ public class 在指定位置添加一个节点 {
         }
 
         if (index == 0) {
+            /**
+             * 头插法
+             */
             return addAtHead(head, value);
         } else if (index == length - 1) {
+            /**
+             * 尾插法
+             */
             addAtTail(head, value);
         } else {
-
+            /**
+             * 随机插入法
+             */
             Node pre = head;
             Node cur = head.next;
             //
