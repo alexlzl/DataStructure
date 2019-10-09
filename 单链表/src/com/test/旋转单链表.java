@@ -29,7 +29,7 @@ public class 旋转单链表 {
 
         Node fast = head;
 
-        //先让快指针走 n 给个位置
+        //先让快指针走 n 个位置
         while (start < n && fast.next != null) {
             fast = fast.next;
             start++;
