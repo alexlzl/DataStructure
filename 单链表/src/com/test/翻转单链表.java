@@ -43,7 +43,7 @@ public class 翻转单链表 {
         //当前节点指针
         Node curNode = head;
         //下一个节点指针
-        Node nextNode = null;
+        Node nextNode ;
 
         while (curNode != null){
             nextNode = curNode.getNext();//nextNode 指向下一个节点
